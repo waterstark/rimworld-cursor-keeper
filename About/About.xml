@@ -10,9 +10,9 @@
   </supportedVersions>
   <description>Keeps the RimWorld cursor on macOS.
 
-In fullscreen, macOS silently swaps an app's custom cursor for the system arrow when the pointer leaves the band at the top of the screen (or brushes the Dock). The game is not told, so the arrow stays until you switch windows.
+In fullscreen, macOS can silently replace the game cursor with the system arrow after the pointer visits the band at the very top of the screen. The game is not told, so the arrow stays until you switch to another app and back.
 
-This mod compares the cursor macOS is really showing with the game cursor and puts the game cursor back: every frame for half a second after the pointer returns from a screen edge, otherwise twice a second. One check costs about 0.07 ms.
+This mod compares the cursor macOS is really showing with the game cursor and puts the game cursor back as soon as the pointer is inside the game again. It checks every frame for half a second after the pointer returns from the edge, otherwise twice a second; one check costs about 0.07 ms.
 
 Works with the vanilla cursor and with themed cursors (e.g. RimThemes). Does nothing on Windows and Linux. Safe to add or remove mid-save.
 
