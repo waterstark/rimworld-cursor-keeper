@@ -11,17 +11,11 @@
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <Version>1.1.0</Version>
   </PropertyGroup>
-  <PropertyGroup>
-    <GameManaged>$(HOME)/Desktop/RimWorldMac.app/Contents/Resources/Data/Managed</GameManaged>
-    <HarmonyDir>$(HOME)/Desktop/RimWorldMac.app/Mods/Harmony/Current/Assemblies</HarmonyDir>
-  </PropertyGroup>
+  <!-- Reference-only packages: nothing from them is copied to the output,
+       and no RimWorld install is needed to build. -->
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net472" Version="1.0.3" PrivateAssets="all" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="Assembly-CSharp"><HintPath>$(GameManaged)/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
-    <Reference Include="UnityEngine.CoreModule"><HintPath>$(GameManaged)/UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
-    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(GameManaged)/UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
-    <Reference Include="0Harmony"><HintPath>$(HarmonyDir)/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.6.4633" PrivateAssets="all" ExcludeAssets="runtime" />
+    <PackageReference Include="Lib.Harmony.Ref" Version="2.4.1" PrivateAssets="all" ExcludeAssets="runtime" />
   </ItemGroup>
 </Project>
