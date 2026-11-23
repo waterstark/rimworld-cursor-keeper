@@ -1,15 +1,17 @@
 # Cursor Keeper (macOS)
 
-A small RimWorld 1.6 mod that keeps the game cursor on macOS.
+![Cursor Keeper preview](About/Preview.png)
 
-In fullscreen, macOS can silently replace an app's custom cursor with the system arrow after the pointer visits the band at the very top of the screen. The game gets no event, so the arrow stays until you switch to another app and back. If you scroll the map by pushing the mouse against the screen edge, this happens a lot.
+A small RimWorld 1.6 mod that fixes the game cursor turning into the macOS arrow. macOS only.
 
-The mod notices the swap and puts the RimWorld cursor back as soon as the pointer is inside the game again.
+When RimWorld runs fullscreen on a Mac, touching the top edge of the screen with the mouse can turn the game cursor into the regular macOS arrow. The game is not notified, so the arrow stays until you switch to another app and back. If you scroll the map by moving the mouse to the screen edge, this happens all the time.
+
+The mod notices the swap and brings the game cursor back as soon as the mouse is back in the game.
 
 ## The bug
 
 - Run RimWorld fullscreen on macOS (seen on macOS 26.6, Apple Silicon).
-- Move the pointer into the band at the very top of the screen, where the menu bar would appear. On MacBooks with a notch, this is the black strip above the game.
+- Move the mouse to the very top edge of the screen, where the menu bar would appear. On MacBooks with a notch, this is the black strip above the game.
 - Move it back down. The RimWorld cursor is now the macOS arrow and stays that way until you switch apps.
 
 Other fullscreen apps with custom cursors hit the same kind of bug:
