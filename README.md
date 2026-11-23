@@ -68,6 +68,10 @@ The DLL is written to `1.6/Assemblies/`.
 
 Not tested yet on Macs without a notch, where the top band overlaps the game itself, or on Intel Macs.
 
+## Credits
+
+The cursor in the preview image is the HSK theme cursor from RimThemesLite (Hardcore SK). The image is drawn by `Source/make_preview.py`.
+
 ## License
 
 [MIT](LICENSE)
