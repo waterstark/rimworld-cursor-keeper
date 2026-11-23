@@ -8,15 +8,29 @@
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
-  <description>Keeps the RimWorld cursor on macOS.
+  <description>Fixes the RimWorld cursor turning into the macOS arrow. macOS only.
 
-In fullscreen, macOS can silently replace the game cursor with the system arrow after the pointer visits the band at the very top of the screen. The game is not told, so the arrow stays until you switch to another app and back.
+When the game runs fullscreen on a Mac, touching the top edge of the screen with the mouse can turn the game cursor into the regular macOS arrow. It stays that way until you switch to another app and back. If you scroll the map by moving the mouse to the screen edge, this happens all the time.
 
-This mod compares the cursor macOS is really showing with the game cursor and puts the game cursor back as soon as the pointer is inside the game again. It checks every frame for half a second after the pointer returns from the edge, otherwise twice a second; one check costs about 0.07 ms.
+This mod notices the swap and brings the game cursor back as soon as the mouse is back in the game. The performance cost is negligible.
 
-Works with the vanilla cursor and with themed cursors (e.g. RimThemes). Does nothing on Windows and Linux. Safe to add or remove mid-save.
+- Works with the vanilla cursor and with RimThemes cursors.
+- Does nothing on Windows and Linux.
+- Safe to add to or remove from an existing save.
 
-Source and details: https://github.com/waterstark/rimworld-cursor-keeper</description>
+---
+
+Возвращает игровой курсор RimWorld, когда macOS подменяет его стрелкой. Только для macOS.
+
+Если играть на Mac в полноэкранном режиме, после касания мышью верхнего края экрана игровой курсор может смениться обычной стрелкой macOS. Стрелка остаётся до переключения на другое приложение и обратно. Если двигать карту, подводя мышь к краю экрана, это случается постоянно.
+
+Мод замечает подмену и возвращает игровой курсор, как только мышь снова оказывается в игре. На производительность почти не влияет.
+
+- Работает с обычным курсором и с курсорами RimThemes.
+- На Windows и Linux ничего не делает.
+- Можно добавить или убрать в уже начатой игре.
+
+Source code / Исходный код: https://github.com/waterstark/rimworld-cursor-keeper</description>
   <modDependencies>
     <li>
       <packageId>brrainz.harmony</packageId>
